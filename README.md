@@ -13,6 +13,30 @@ Algorithm is based on AffineSIFT [1]. Given a pair of images, a number of 'views
 1. Features other that SIFT can be used (ORB, SURF, BRISK, ...)
 2. Incremental matching is implemented. If images can not be matched without distortions, tilt = 1 is used to create distorted 'views'. If that is not enough, tilt = 2 is used, and so on.
 
+### Compile
+
+make sure you have `OpenCV` and `Boost` libraries
+
+```
+cd Eerie
+mkdir build
+cd build
+cmake ..
+make
+cd ..
+```
+
+### Usage
+
+```
+# a minimal working example
+build/aff_demo
+
+# matching two images (--help for options)
+build/aff_match_images --help
+```
+
+
 
 #### References
 
